@@ -1,0 +1,7 @@
+*.csv
+*.xlsx
+venv
+.idea
+__pycache__
+*.sh
+*.txt
