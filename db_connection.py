@@ -1,9 +1,6 @@
 import sys
 import pyodbc
 
-server_name = 'DESKTOP-5CNJJCA\SQLEXPRESS'
-
-user_name = 'kgrac'
 
 conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=DESKTOP-5CNJJCA\SQLEXPRESS;'
