@@ -1,22 +1,6 @@
-import mariadb
 import sys
 import pyodbc
 
-# Connect to MariaDB Platform
-"""
-try:
-    conn = mariadb.connect(
-        user="Krzysztof",
-        password="7F#NB6GNCp9",
-        host="192.168.1.101",
-        port=3306,
-        database="usedcarsni"
-
-    )
-except mariadb.Error as e:
-    print(f"Error connecting to MariaDB Platform: {e}")
-    sys.exit(1)
-"""
 server_name = 'DESKTOP-5CNJJCA\SQLEXPRESS'
 
 user_name = 'kgrac'
@@ -30,12 +14,6 @@ cursor = conn.cursor()
 
 # Get Cursor
 cur = conn.cursor()
-
-
-#conn.commit()
-#print('added')
-
-
 
 #create table
 """

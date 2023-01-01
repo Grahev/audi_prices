@@ -9,38 +9,7 @@ import datetime
 from functions import extract_details, clean_title, get_year
 from db_connection import insert_car_to_db
 
-#url = 'https://www.usedcarsni.com/search_results.php?make=1&model=102&keywords=&fuel_type=0&trans_type=2&age_from=0&age_to=0&price_from=0&price_to=0&user_type=0&mileage_to=0&body_style=9&distance_enabled=0&distance_postcode=&homepage_search_attr=1&tab_id=0&search_type=1'
 headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36'}
-
-"""
-url = 'https://www.usedcarsni.com/search_results.php?search_type=1&make=1&model=102'
-page_no = 'pagepc0=2'
-s = HTMLSession()
-r = s.get(url, headers=headers)
-soup = BeautifulSoup(r.content,'html.parser')
-
-
-
-container = soup.find('div', class_ = 'car-list')
-
-item = container.find('article', class_=['add-half-row','overflowed-flex', 'car-line'])
-
-listings = container.find_all('article', class_=['add-half-row','overflowed-flex', 'car-line'])
-
-
-
-title = clean_title(item.find('div', class_=['car-title', 'overflowed-flex', 'space-between']))
-m = item.find('dl', class_ = ['dl-horizontal', 'other-ads']).find_next('dd')
-milage = m.text.split(' ')[0]
-details = extract_details(item.find('dl', class_ = ['dl-horizontal', 'other-ads']))
-price = int(item.find('div', class_=['euroPrice']).text)
-link = item.find('div', class_=['car-title', 'overflowed-flex', 'space-between']).find_next('a', href=True)
-base_link = 'https://www.usedcarsni.com'+ link['href']
-link = base_link.split('?')[0]
-print(link)
-
-"""
-
 
 def car_full_info(item):
     full_title = item.find('div', class_=['car-title', 'overflowed-flex', 'space-between'])
